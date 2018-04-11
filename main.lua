@@ -22,6 +22,8 @@ rightarrow.x = display.contentCenterX - 500
 rightarrow.y = display.contentCenterY + 600
 rightarrow.id = " rihgtarrow "
 
+local drums = audio.loadsound('drums')
+
 local function leftarrowTouch( event )
 	ninga.x = ninga.x - 50
 
@@ -39,5 +41,12 @@ local function rightarrowTouch( event )
 end
 
 
+
+local function ningaTouch()
+	audio.play('drums')
+end 
+
+
 leftarrow:addEventListener( "touch", leftarrowTouch )
 rightarrow:addEventListener( "touch", rightarrowTouch )
+ninga:addEventListener("touch", ningaTouch)
